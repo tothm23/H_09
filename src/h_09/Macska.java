@@ -33,8 +33,12 @@ public class Macska {
         return age;
     }
 
-    public void setAge(Integer age) {
-        this.age = age;
+    public void birthday() throws TooOldException {
+        if (this.age <= 25) {
+            this.age++;
+        } else {
+            throw new TooOldException("Ez a mcska túl öreg");
+        }
     }
 
     public Boolean getMale() {
